@@ -11,6 +11,39 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  --
+  {
+    "CRAG666/code_runner.nvim",
+    event = "User AstroFile",
+    config = function()
+      require("code_runner").setup {
+        filetype = {
+          java = {
+            "cd $dir &&",
+            "javac $fileName &&",
+            "java $fileNameWithoutExt",
+          },
+          -- python = "python3 -u",
+          -- typescript = "deno run",
+          cpp = {
+            "cd $dir &&",
+            "g++ $fileName &&",
+            "./a.out",
+          },
+          rust = {
+            "cd $dir &&",
+            "rustc $fileName &&",
+            "$dir$fileNameWithoutExt",
+          },
+        },
+      }
+    end,
+    -- cmd = { "TodoQuickFix" },
+    keys = {
+      { "<leader>r", "<cmd>RunCode<cr>",  desc = "Run code" },
+      { "<leader>i", "<cmd>RunClose<cr>", desc = "Run close" },
+    },
+  },
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
