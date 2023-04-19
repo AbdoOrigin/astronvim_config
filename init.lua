@@ -1,3 +1,9 @@
+-- added harpoon
+-- telescope mappings
+-- html & css Treesitter
+-- html lsp
+-- neotree leader = false, leader o  = toggle
+-- cpp bksel aktb snippet
 return {
   -- Configure AstroNvim updates
   updater = {
