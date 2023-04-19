@@ -32,8 +32,9 @@ return {
           },
           rust = {
             "cd $dir &&",
-            "rustc $fileName &&",
-            "$dir$fileNameWithoutExt",
+            "cargo run $fileName",
+            -- "rustc $fileName &&",
+            -- "$dir$fileNameWithoutExt",
           },
         },
       }

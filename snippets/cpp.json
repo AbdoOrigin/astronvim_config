@@ -1,0 +1,14 @@
+{
+  "setup": {
+    "prefix": ["#in"],
+    "body": [
+      "#include<iostream>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "\t$0",
+      "}"
+    ],
+    "description": "bksel akteb"
+  }
+}
