@@ -40,9 +40,24 @@ return {
       }
     end,
     -- cmd = { "TodoQuickFix" },
+    -- let s:mappingsState=1
+    --
+    --   command! TM call ToggleMappings()
+    --
+    -- function! ToggleMappings()
+    -- if s:mappingsState
+    --   nnoremap <F1> :echo "mapping 1"<CR>
+    --   " Or any mapping you want to create
+    --   else
+    --   unmap <F1>
+    --   " Or any key you want to unmap
+    --   endif
+    --
+    --   let s:mappingsState = !s:mappingsState
+    --   endfunction
     keys = {
       { "<leader>r", "<cmd>RunCode<cr>",  desc = "Run code" },
-      { "<leader>i", "<cmd>RunClose<cr>", desc = "Run close" },
+      -- { "<leader>i", "<cmd>RunClose<cr>", desc = "Run close" },
     },
   },
   {
