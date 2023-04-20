@@ -44,7 +44,8 @@ return {
     -- ["<esc>"] = false,
   },
   i = {
-    -- ["<C-j>"] = { "<cr>", desc = "better enter" },
+    ["<C-H>"] = { "<C-w>", desc = "better ctrl escape" },
+    -- ["<C-j>"] = { "<cr>" },
     -- ["<C-j>"] = { "<cr>", desc = "better enter" },
     -- ["<C-bs>"] = { "<C-w>" } ,
     -- ["<C-j>"] = {
