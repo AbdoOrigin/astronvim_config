@@ -2,7 +2,7 @@
   "setup": {
     "prefix": ["#in"],
     "body": [
-      "#include<iostream>",
+      "#include <iostream>",
       "using namespace std;",
       "",
       "int main() {",
