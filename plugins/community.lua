@@ -8,7 +8,6 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.cmake" },
-  { import = "astrocommunity.colorscheme.nightfox" },
   { import = "astrocommunity.motion.harpoon" },
   {
     "ThePrimeagen/harpoon",
