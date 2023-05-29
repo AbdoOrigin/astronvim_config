@@ -47,9 +47,10 @@ return {
       -- local Rule = require "nvim-autopairs.rule"
       -- local cond = require "nvim-autopairs.conds"
 
-      require('nvim-autopairs').setup({
+      require("nvim-autopairs").setup {
         map_c_w = true,
-      })
+        map_c_h = true,
+      }
       -- mappings {
       --
       -- }
@@ -71,7 +72,7 @@ return {
       --       :with_cr(cond.none()),
       --   },
       --   -- disable for .vim files, but it work for another filetypes
-      --   
+      --
       --   Rule("a", "a", "-vim")
       -- )
     end,
@@ -91,7 +92,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     opts = function(_, opts)
-      local actions = require"telescope.actions"
+      local actions = require "telescope.actions"
 
       return require("astronvim.utils").extend_tbl(opts, {
         defaults = {
@@ -103,14 +104,50 @@ return {
               ["<C-k>"] = actions.cycle_history_prev,
               ["<C-n>"] = actions.move_selection_next,
               ["<C-p>"] = actions.move_selection_previous,
-
-
             },
           },
         },
       })
     end,
   },
+  -- {
+  --   "nvim-telescope/telescope.nvim",
+  --
+  --   config = function()
+  --     require("neo-tree").setup {
+  --       window = {
+  --         position = "float",
+  --         -- width = 40,
+  --         mappings = {
+  --           ["<space>"] = false, -- disable space until we figure out which-key disabling
+  --           ["[b"] = "prev_source",
+  --           ["]b"] = "next_source",
+  --           o = "open",
+  --           O = "system_open",
+  --           h = "parent_or_close",
+  --           l = "child_or_open",
+  --           Y = "copy_selector",
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   -- override the options table that is used in the `require("cmp").setup()` call
+  --   opts = function(_, opts)
+  --     -- opts parameter is the default options table
+  --     -- the function is lazy loaded so cmp is able to be required
+  --     local cmp = require "cmp"
+  --     -- modify the mapping part of the table
+  --     -- opts.mapping["<C-x>"] = cmp.mapping.select_next_item()
+  --     opts.mapping["<C-Y"] = cmp.confirm { select = false }
+  --
+  --
+  --     -- return the new table to be used
+  --     return opts
+  --   end,
+  -- },
   -- {
   --   "mrjones2014/smart-splits.nvim",
   --   require('smart-splits').setup({
@@ -123,5 +160,4 @@ return {
   --     },
   --   })
   -- }
-
 }

@@ -37,14 +37,23 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>o"] = {"<cmd>Neotree toggle<cr>", desc = "toggle neotreez"},
+    ["<leader>o"] = false,
+    ["<leader>e"] = {"<cmd>Neotree toggle<cr>", desc = "toggle neotreez"},
+        ["<C-d>"] = { "<C-d>zz" },
+        ["<C-u>"] = { "<C-u>zz" },
+    ["<leader>p"] = { '"_dP', desc = "blackhole delete and paste" },
+    ["<leader>d"] = { '"_d', desc = "blackhole delete and paste" },
+
+    -- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
   i = {
-    ["<C-H>"] = { "<C-w>", desc = "better ctrl escape" },
+    -- ["<C-H>"] = { "<C-w>", desc = "better ctrl escape" },
+    ["<C-j>"] = { "<cr>", desc = "better enter", remap = true},
+    -- ["<C-J>"] = { "<CR>", remap}
     -- ["<C-j>"] = { "<cr>" },
     -- ["<C-j>"] = { "<cr>", desc = "better enter" },
     -- ["<C-bs>"] = { "<C-w>" } ,
@@ -62,5 +71,9 @@ return {
     -- },
     -- TODO: send this to astronvim discord serever & tell them 
     -- that you want to disable j & k to work cycle history instead of cycle next
+  },
+  v = {
+    ["<leader>p"] = { '"_dP', desc = "blackhole delete and paste" },
+    ["<leader>d"] = { '"_d', desc = "blackhole delete and paste" },
   }
 }
