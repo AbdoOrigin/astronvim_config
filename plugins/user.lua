@@ -36,6 +36,10 @@ return {
             -- "rustc $fileName &&",
             -- "$dir$fileNameWithoutExt",
           },
+          zig = {
+            "cd $dir &&",
+            "zig run $fileName",
+          },
         },
       }
     end,
@@ -56,7 +60,7 @@ return {
     --   let s:mappingsState = !s:mappingsState
     --   endfunction
     keys = {
-      { "<leader>r", "<cmd>RunCode<cr>",  desc = "Run code" },
+      { "<leader>r", "<cmd>RunCode<cr>", desc = "Run code" },
       -- { "<leader>i", "<cmd>RunClose<cr>", desc = "Run close" },
     },
   },
@@ -82,5 +86,5 @@ return {
     keys = {
       { "<leader>y", "<cmd>UndotreeToggle<cr>", desc = "undotree" },
     },
-  }
+  },
 }

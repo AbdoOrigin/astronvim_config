@@ -45,7 +45,7 @@ return {
   NotifyDEBUGBorder = { bg = "NONE" },
   NotifyTRACEBorder = { bg = "NONE" },
   NotifyBackground = { bg = "#000000" },
-  NotifyBackground = { bg = "NONE" },
+  -- NotifyBackground = { bg = "NONE" },
   LineNr = { fg = "#CCCCCC" },
   CursorLineNr = { fg = "white" },
 }

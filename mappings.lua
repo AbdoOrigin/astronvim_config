@@ -1,5 +1,5 @@
--- TODO: make luasnip cofirm choices with c_y and c_j 
--- && make telescope cycle choices with c_n && c_p 
+-- TODO: make luasnip cofirm choices with c_y and c_j
+-- && make telescope cycle choices with c_n && c_p
 -- && cyclehistory with c_j && c_k
 -- Did the Telescope thing LET'S GOOOOOOOOO!!!
 --
@@ -13,14 +13,14 @@
 return {
   -- first key is the mode
   n = {
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   opts = function()
-  --     mappings = {
-  --       ["<leader>e"] = { "<leader>o" },
-  --     }
-  --   end,
-  -- },
+    -- {
+    --   "nvim-neo-tree/neo-tree.nvim",
+    --   opts = function()
+    --     mappings = {
+    --       ["<leader>e"] = { "<leader>o" },
+    --     }
+    --   end,
+    -- },
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -37,12 +37,13 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>o"] = false,
-    ["<leader>e"] = {"<cmd>Neotree toggle<cr>", desc = "toggle neotreez"},
-        ["<C-d>"] = { "<C-d>zz" },
-        ["<C-u>"] = { "<C-u>zz" },
+    -- ["<leader>o"] = false,
+    ["<leader>e"] = { "<cmd>Neotree toggle<cr>", desc = "toggle neotreez" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
     ["<leader>p"] = { '"_dP', desc = "blackhole delete and paste" },
     ["<leader>d"] = { '"_d', desc = "blackhole delete and paste" },
+    ["<leader>o"] = { "<cmd>ToggleTerm<cr>", desc = "toggle termz" },
 
     -- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
   },
@@ -52,7 +53,7 @@ return {
   },
   i = {
     -- ["<C-H>"] = { "<C-w>", desc = "better ctrl escape" },
-    ["<C-j>"] = { "<cr>", desc = "better enter", remap = true},
+    ["<C-j>"] = { "<cr>", desc = "better enter", remap = true },
     -- ["<C-J>"] = { "<CR>", remap}
     -- ["<C-j>"] = { "<cr>" },
     -- ["<C-j>"] = { "<cr>", desc = "better enter" },
@@ -69,11 +70,11 @@ return {
     --   end,
     --   desc = "please work 2",
     -- },
-    -- TODO: send this to astronvim discord serever & tell them 
+    -- TODO: send this to astronvim discord serever & tell them
     -- that you want to disable j & k to work cycle history instead of cycle next
   },
   v = {
     ["<leader>p"] = { '"_dP', desc = "blackhole delete and paste" },
     ["<leader>d"] = { '"_d', desc = "blackhole delete and paste" },
-  }
+  },
 }
