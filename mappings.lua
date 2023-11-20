@@ -38,14 +38,29 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- ["<leader>o"] = false,
+    --TODO: move to their folder
     ["<leader>e"] = { "<cmd>Neotree toggle<cr>", desc = "toggle neotreez" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
     ["<leader>p"] = { '"_dP', desc = "blackhole delete and paste" },
     ["<leader>d"] = { '"_d', desc = "blackhole delete and paste" },
-    ["<leader>o"] = { "<cmd>ToggleTerm<cr>", desc = "toggle termz" },
+    -- ["<leader>o"] = false,
+    -- ["<leader>o"] = { "<cmd>ToggleTerm<cr>", desc = "toggle termz" },
+    ["<leader>fml"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
+    -- ["<leader>h"] = { "<cmd>lua require("buffer_manager.ui").toggle_quick_menu()", desc = "harpoonz" },
+    ["<leader>h"] = {
+      function() require("buffer_manager.ui").toggle_quick_menu() end,
+      desc = "harpoonz",
+    },
 
     -- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+    -- ["<C-j>"] = false,
+    -- ["<C-k>"] = false,
+    -- ["<C-h>"] = false,
+    -- ["<C-l>"] = false,
+
+    ["<leader>o"] = { "<cmd>DeleteDebugPrints<CR>" },
+    ["<C-q>"] = { "<C-w>q" },
   },
   t = {
     -- setting a mapping to false will disable it

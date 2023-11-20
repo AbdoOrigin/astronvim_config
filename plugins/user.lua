@@ -40,6 +40,10 @@ return {
             "cd $dir &&",
             "zig run $fileName",
           },
+          python = {
+            "cd $dir &&",
+            "python3 $fileName",
+          },
         },
       }
     end,

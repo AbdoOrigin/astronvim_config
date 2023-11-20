@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "mappings",
         "local",
-        "window"
+        "window",
+        "buffer_manager"
     ]
 }

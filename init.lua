@@ -1,9 +1,8 @@
 if vim.g.neovide then
-  vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
+  vim.o.guifont = "CaskaydiaCove Nerd Font:h12"
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_fullscreen = true
   vim.g.neovide_transparency = 0.7
-  -- vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
 -- added harpoon
 -- telescope mappings
@@ -30,7 +29,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "onedark_dark",
+  colorscheme = "tokyonight-night",
+  -- colorscheme = "gruvbox",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
