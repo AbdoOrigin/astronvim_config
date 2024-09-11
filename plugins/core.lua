@@ -20,14 +20,15 @@ return {
   },
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
+  { "kevinhwang91/nvim-ufo", enabled = false },
   --
-  {
-    "L3MON4D3/LuaSnip",
-    config = function(plugin, opts)
-      require "plugins.configs.luasnip"(plugin, opts)
-      require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
-    end,
-  },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   config = function(plugin, opts)
+  --     require "plugins.configs.luasnip"(plugin, opts)
+  --     require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
+  --   end,
+  -- },
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
   --   "L3MON4D3/LuaSnip",

@@ -10,13 +10,33 @@ return {
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  -- { import = "astrocommunity.pack.dart" },
+  { import = "astrocommunity.colorscheme.nordic-nvim" },
+  { import = "astrocommunity.colorscheme.vscode-nvim" },
+  -- { import = "astrocommunity.pack.java" },
+  -- { import = "astrocommunity.colorscheme.nord-nvim" },
+  -- { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  -- { import = "astrocommunity.pack.php" },
+
   {
     "linux-cultist/venv-selector.nvim",
     enabled = false,
   },
+  -- {
+  --   "shaunsingh/nord.nvim",
+  --   init = function()
+  --     vim.g.nord_contrast = true
+  --     vim.g.nord_borders = false
+  --     vim.g.nord_disable_background = true
+  --     vim.g.nord_italic = false
+  --     vim.g.nord_uniform_diff_background = true
+  --     vim.g.nord_bold = false
+  --   end,
+  -- },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim", enabled = false },
   -- { import = "astrocommunity.colorscheme.github-nvim-theme", enabled = false },
   -- { import = "astrocommunity.colorscheme.poimandres-nvim", enabled = false },
@@ -31,48 +51,48 @@ return {
   --   },
   -- },
   -- { import = "astrocommunity.motion.harpoon" },
-  -- { import = "astrocommunity.media.presence-nvim", enabled = false },
-  -- {
-  --   "andweeb/presence.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --     -- client_id = "1009122352916857003", -- astrovim
-  --     -- client_id = "1113844253530013776", --neovim
-  --     auto_update = true,
-  --     neovim_image_text = "notepad",
-  --     buttons = false,
-  --     main_image = "file",
-  --     file_assets = {
-  --       rs = {
-  --         "Rust",
-  --         "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
-  --       },
-  --       cpp = {
-  --         "notepad",
-  --         "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
-  --       },
-  --       lua = {
-  --         "Lua",
-  --         "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
-  --       },
-  --     },
-  --
-  --     editing_text = function(filename) -- filename arg doesn't need to be used here
-  --       -- Determine type of file using vim's &filetype variable
-  --       local filetype = vim.bo.filetype:gsub("^%l", string.upper)
-  --       return string.format("%s.txt", filetype)
-  --     end,
-  --
-  --     -- Rich Presence text options
-  --     -- editing_text = "Editing %s", -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
-  --     -- file_explorer_text = "Browsing %s", -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
-  --     -- git_commit_text = "Committing changes", -- Format string rendered when committing changes in git (either string or function(filename: string): string)
-  --     -- plugin_manager_text = "Managing plugins", -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
-  --     -- reading_text = "Reading %s", -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
-  --     workspace_text = "Working on deez", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
-  --     -- line_number_text = "Line %s out of %s",
-  --   },
-  -- },
+  { import = "astrocommunity.media.presence-nvim", enabled = false },
+  {
+    "andweeb/presence.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- client_id = "1009122352916857003", -- astrovim
+      -- client_id = "1113844253530013776", --neovim
+      auto_update = true,
+      neovim_image_text = "notepad",
+      buttons = false,
+      main_image = "file",
+      file_assets = {
+        rs = {
+          "Rust",
+          "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
+        },
+        cpp = {
+          "notepad",
+          "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
+        },
+        lua = {
+          "Lua",
+          "https://static.wikia.nocookie.net/logopedia/images/c/c4/Notepad_Vista_10.png/revision/latest?cb=20181031102045",
+        },
+      },
+
+      editing_text = function(filename) -- filename arg doesn't need to be used here
+        -- Determine type of file using vim's &filetype variable
+        local filetype = vim.bo.filetype:gsub("^%l", string.upper)
+        return string.format("%s.txt", filetype)
+      end,
+
+      -- Rich Presence text options
+      -- editing_text = "Editing %s", -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
+      -- file_explorer_text = "Browsing %s", -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
+      -- git_commit_text = "Committing changes", -- Format string rendered when committing changes in git (either string or function(filename: string): string)
+      -- plugin_manager_text = "Managing plugins", -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
+      -- reading_text = "Reading %s", -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
+      workspace_text = "Working on deez", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
+      -- line_number_text = "Line %s out of %s",
+    },
+  },
   -- {
   --   "ThePrimeagen/harpoon",
   --   -- local prefix = "<leader><leader>"

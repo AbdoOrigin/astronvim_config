@@ -2,8 +2,17 @@ if vim.g.neovide then
   vim.o.guifont = "CaskaydiaCove Nerd Font:h12"
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_fullscreen = true
-  vim.g.neovide_transparency = 0.7
+  -- vim.g.neovide_transparency = 0.7
 end
+
+-- for nord theme
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--   callback = function(args)
+--     local client = vim.lsp.get_client_by_id(args.data.client_id)
+--     client.server_capabilities.semanticTokensProvider = nil
+--   end,
+-- })
+
 -- added harpoon
 -- telescope mappings
 -- html & css Treesitter
@@ -29,7 +38,7 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "tokyonight-night",
+  colorscheme = "nordic",
   -- colorscheme = "gruvbox",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
