@@ -1,3 +1,5 @@
+-- if true then return {} end
+
 return {
   { "simrat39/rust-tools.nvim", lazy = true }, -- add lsp plugin
   {
