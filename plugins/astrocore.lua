@@ -46,9 +46,9 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       -- first key is the mode
-      i = {
-        ["<C-j>"] = { "<cr>", desc = "better enter", remap = true },
-      },
+      -- i = {
+      --   ["<C-j>"] = { "<cr>", desc = "better enter", remap = true },
+      -- },
       n = {
         -- second key is the lefthand side of the map
 
