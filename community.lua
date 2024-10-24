@@ -16,5 +16,6 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.bash" },
   -- import/override with your plugins folder
 }
