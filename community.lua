@@ -15,5 +15,6 @@ return {
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.pack.docker" },
   -- import/override with your plugins folder
 }
